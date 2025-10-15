@@ -31,7 +31,7 @@ template<typename... Ts> class Esp32BleKeyboardPressAction : public Action<Ts...
 
       this->ble_keyboard_->press(mediaKey);
     } else {
-      this->ble_keyboard_->press(this->code_.value(x...));
+      this->ble_keyboard_->press(this->code_.value(x...), false);
     }
   }
 
